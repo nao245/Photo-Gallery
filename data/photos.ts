@@ -2,10 +2,12 @@
 import { Photo } from '../types';
 
 // Initial placeholder photos with rich metadata
+// Assumes images are located in the `public/images` directory.
 export const initialPhotos: Photo[] = [
   {
     id: '2',
-    src: ['https://picsum.photos/id/1025/800/600'],
+    src: ['/images/loyal-companion.jpg'],
+    highResSrc: '/images/loyal-companion-high-res.jpg',
     alt: 'Loyal Companion',
     location: 'Scottish Highlands',
     date: '2023-08-22',
@@ -17,9 +19,9 @@ export const initialPhotos: Photo[] = [
   {
     id: '3',
     src: [
-        'https://picsum.photos/id/1040/800/600', 
-        'https://picsum.photos/id/1041/800/600', 
-        'https://picsum.photos/id/1042/800/600'
+        '/images/castle-1.jpg', 
+        '/images/castle-2.jpg', 
+        '/images/castle-3.jpg'
     ],
     alt: 'Castle Series',
     location: 'Bavaria, Germany',
@@ -31,7 +33,7 @@ export const initialPhotos: Photo[] = [
   },
    {
     id: '5',
-    src: ['https://picsum.photos/id/1074/800/600'],
+    src: ['/images/city-of-lights.jpg'],
     alt: 'City of Lights',
     location: 'Tokyo, Japan',
     date: '2024-01-20',
@@ -42,7 +44,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '4',
-    src: ['https://picsum.photos/id/106/800/600'],
+    src: ['/images/into-the-wild.jpg'],
     alt: 'Into the Wild',
     location: 'Zion National Park, USA',
     date: '2023-05-30',
@@ -52,7 +54,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '6',
-    src: ['https://picsum.photos/id/108/800/600'],
+    src: ['/images/coastal-drive.jpg'],
     alt: 'Coastal Drive',
     location: 'Big Sur, California',
     date: '2023-06-18',
@@ -63,7 +65,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '7',
-    src: ['https://picsum.photos/id/21/800/600'],
+    src: ['/images/urban-reflection.jpg'],
     alt: 'Urban Reflection',
     location: 'Chicago, USA',
     date: '2023-11-05',
@@ -74,7 +76,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '8',
-    src: ['https://picsum.photos/id/26/800/600', 'https://picsum.photos/id/35/800/600'],
+    src: ['/images/forest-floor-1.jpg', '/images/forest-floor-2.jpg'],
     alt: 'Forest Floor Details',
     location: 'Black Forest, Germany',
     date: '2023-10-12',
@@ -85,7 +87,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '9',
-    src: ['https://picsum.photos/id/42/800/600'],
+    src: ['/images/pensive-gaze.jpg'],
     alt: 'Pensive Gaze',
     location: 'Paris, France',
     date: '2024-02-18',
@@ -96,7 +98,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '10',
-    src: ['https://picsum.photos/id/48/800/600'],
+    src: ['/images/geometric-lines.jpg'],
     alt: 'Geometric Lines',
     location: 'Berlin, Germany',
     date: '2023-12-01',
@@ -107,7 +109,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '11',
-    src: ['https://picsum.photos/id/60/800/600'],
+    src: ['/images/morning-brew.jpg'],
     alt: 'Morning Brew',
     location: 'Kyoto, Japan',
     date: '2024-03-05',
@@ -118,7 +120,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '12',
-    src: ['https://picsum.photos/id/84/800/600', 'https://picsum.photos/id/85/800/600', 'https://picsum.photos/id/96/800/600'],
+    src: ['/images/market-hustle-1.jpg', '/images/market-hustle-2.jpg', '/images/market-hustle-3.jpg'],
     alt: 'Market Hustle',
     location: 'Marrakech, Morocco',
     date: '2024-04-22',
@@ -129,7 +131,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '13',
-    src: ['https://picsum.photos/id/103/800/600'],
+    src: ['/images/shadow-and-light.jpg'],
     alt: 'Shadow and Light',
     location: 'New York City, USA',
     date: '2023-08-30',
@@ -140,7 +142,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '14',
-    src: ['https://picsum.photos/id/111/800/600'],
+    src: ['/images/oceans-breath.jpg'],
     alt: 'Ocean\'s Breath',
     location: 'Iceland',
     date: '2023-09-25',
@@ -151,8 +153,8 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '15',
-    src: ['https://picsum.photos/id/122/800/600'],
-    highResSrc: 'https://picsum.photos/id/122/1920/1080',
+    src: ['/images/galactic-core.jpg'],
+    highResSrc: '/images/galactic-core-high-res.jpg',
     alt: 'Galactic Core',
     location: 'Atacama Desert, Chile',
     date: '2023-07-19',
@@ -163,7 +165,7 @@ export const initialPhotos: Photo[] = [
   },
   {
     id: '16',
-    src: ['https://picsum.photos/id/145/800/600'],
+    src: ['/images/liquid-gold.jpg'],
     alt: 'Liquid Gold',
     location: 'Studio',
     date: '2024-05-10',

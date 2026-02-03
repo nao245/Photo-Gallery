@@ -11,7 +11,7 @@ import { getHighResUrl } from './utils';
 import PasscodeModal from './components/PasscodeModal';
 import { initialPhotos } from './data/photos'; // Import photos from the new file
 
-const defaultHeroUrl = 'https://picsum.photos/id/1025/1920/1080';
+const defaultHeroUrl = '/images/loyal-companion-high-res.jpg';
 const PASSCODE = '1356';
 
 const OwnerModeBanner: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
