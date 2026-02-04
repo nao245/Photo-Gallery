@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Photo } from '../types';
 import LandscapeIcon from './icons/LandscapeIcon';
 
@@ -9,54 +9,22 @@ interface PhotoItemProps {
   isOwnerMode: boolean;
   onSetHero: () => void;
   isCurrentHero: boolean;
-  scrollContainerRef: React.RefObject<HTMLDivElement>;
+  isVisible: boolean;
 }
 
-const PhotoItem: React.FC<PhotoItemProps> = ({ photo, onClick, isOwnerMode, onSetHero, isCurrentHero, scrollContainerRef }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = elementRef.current;
-    const container = scrollContainerRef.current;
-
-    if (!element || !container) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // If the element is intersecting (i.e., in the viewport), make it visible
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // Once visible, we don't need to observe it anymore
-          observer.unobserve(element);
-        }
-      },
-      {
-        root: container,
-        threshold: 0.1, // Trigger when 10% of the item is visible
-        rootMargin: '0px 200px 0px 200px' // Widen the horizontal observation area
-      }
-    );
-
-    observer.observe(element);
-
-    return () => {
-      // Disconnect the observer when the component is unmounted
-      observer.disconnect();
-    };
-  }, [scrollContainerRef]);
+const PhotoItem: React.FC<PhotoItemProps> = ({ photo, onClick, isOwnerMode, onSetHero, isCurrentHero, isVisible }) => {
 
   const handleSetHeroClick = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent modal from opening
     onSetHero();
   };
 
-  // Simple fade-in and slide-up animation
+  // Simple fade-in and slide-up animation controlled by isVisible prop from parent
   const visibilityClass = isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95";
 
   return (
     <div 
-      ref={elementRef}
+      data-photoid={photo.id}
       className={`h-[45vh] sm:h-[55vh] relative group cursor-pointer transition-all duration-700 ease-out flex-shrink-0 ${visibilityClass}`}
       onClick={onClick}
     >
