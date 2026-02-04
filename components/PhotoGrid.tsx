@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { Photo } from '../types';
 import PhotoItem from './PhotoItem';
 import { getHighResUrl } from '../utils';
@@ -17,7 +17,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick, isOwnerMode
   const [visiblePhotos, setVisiblePhotos] = useState<Set<string>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const container = scrollContainerRef.current;
     const grid = gridRef.current;
     if (!container || !grid) return;
