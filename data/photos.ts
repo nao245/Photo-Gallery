@@ -70,5 +70,5 @@ export const initialPhotos: Photo[] = [
     lens: '85mm f/1.4',
     settings: '1/4000s, f/1.4, ISO 100',
     description: ''
-  }
+  },
 ];
