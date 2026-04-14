@@ -59,5 +59,16 @@ export const initialPhotos: Photo[] = [
     lens: '85mm f/1.4',
     settings: '1/4000s, f/1.4, ISO 100',
     description: ''
+  },
+  {
+    id: '6',
+    src: '/images/photo-06.jpg',
+    alt: 'Golden Hour',
+    location: '江の島',
+    date: '2024/08/05',
+    camera: 'Sony A7S III',
+    lens: '85mm f/1.4',
+    settings: '1/4000s, f/1.4, ISO 100',
+    description: ''
   }
 ];
